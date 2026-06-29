@@ -1,0 +1,172 @@
+/* selector universal*/
+
+*{margin: 3px;
+padding: 3px;
+box-sizing:border-box;
+}
+
+/* selector de clase*/
+
+.introduccion{
+    background: linear-gradient(145deg, #e6f0fa, #d4e4f5);
+    padding: 50px 40px;
+    text-align: center;
+    margin: 40px auto;
+    border: none;
+    border-radius: 20px;
+    max-width: 900px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 6px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    color: #1e2a3a;
+    transition: all 0.2s ease;
+}
+/* selector de id */
+
+#btn{
+    background-color: rgb(4, 4, 18);
+    color: #d02daa;
+    padding: 10px 18px ;
+    border: none;
+
+ }
+
+/* selector de etiqueta  FUENTE DE LAS LETRAS puedo usar google fonts */
+body{
+    font-family: PT Serif Static, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: rgb(37, 34, 214);
+}
+h2{
+    color: rgb(2, 2, 2);
+	} 
+p {
+font-size: 25px;
+}
+
+/* ------------------------------------------- */
+
+.introduccion {
+    background-color: lightblue;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.introduccion {
+    background-color: rgb(17, 249, 129);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+
+/* ------------------------------------------- */
+/* Clase 5*/
+
+.recursos {
+    width: 90%;
+    /* ocupa el 90% del ancho disponible */
+    max-width: 1100px;
+    /* limita el ancho máximo a 1100px */
+    min-width: 800px;
+    /* limita el ancho mínimo a 800px */
+    margin: 20px auto;
+    /* centra el contenedor horizontalmente */
+    padding: 2rem;
+    background-image: linear-gradient(rgba(1, 5, 7, 0.85), rgba(255, 255, 255, 0.95));
+    border: 3px solid #051c32;
+}
+
+.texto-recursos {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.tarjetas {
+    text-align: center;
+}
+
+.tarjeta {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    /* cada tarjeta ocupa el 30% del contenedor */
+    min-width: 250px;
+    height: 260px;
+    margin: 1%;
+    padding: 1.5rem;
+    background-color: rgb(229, 74, 74);
+    border: 2px solid #db3e3e;
+}
+
+/* selector de espacio*/
+.tarjeta h3 {
+    font-size: 1.4rem;
+    /* el título crece según la medida raíz */
+    margin-bottom: 1rem;
+    color: #1f3c88;
+}
+
+.tarjeta p {
+    font-size: 1rem;
+    /* el texto crece según la medida raíz */
+    line-height: 1.5em;
+    /* la altura de línea es 1.5 veces el tamaño de fuente */
+}
+
+/* selector de hijo directo -> .tarjeta > span 
+ no funcionaría porque el span está dentro del p, no directamente dentro de .tarjeta*/
+.tarjeta span {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.icono {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    color: #b35009;
+}
+
+/* Tarjeta 1: medidas absolutas */
+.tarjeta-uno {
+    background-color: #eaf7ff;
+}
+
+/* Tarjeta 2: medidas relativas */
+.tarjeta-dos {
+    background-color: rgb(232, 245, 233);
+    font-size: 1rem;
+}
+
+.tarjeta-dos p {
+    font-size: 1.1em;
+}
+
+/* Tarjeta 3: overflow */
+.tarjeta-tres {
+    background-color: rgba(255, 235, 205, 0.9);
+}
+
+.texto-largo {
+    height: 100px;
+    padding-right: 10px;
+    overflow: auto;
+    /* scroll , visible ,hidden,auto importante   */
+}
+
+/* Ejemplo de unidades flexibles */
+.recursos h2 {
+    font-size: 4vw;
+}
+
+@media (max-width: 768px) {
+    .recursos h2 {
+        font-size: 2rem;
+    }
+
+    .tarjeta {
+        display: block;
+        width: 90%;
+        margin: 15px auto;
+        height: auto;
+    }
+}

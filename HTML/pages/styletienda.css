@@ -1,0 +1,149 @@
+/* ============================================
+RESET BÁSICO
+Los navegadores agregan margin/padding por
+defecto. Lo limpiamos para partir de cero.
+=============================================== */
+
+* {
+    margin: 1;
+    padding: 1;
+
+    /* ⭐ BOX-MODEL: con "border-box", el width/height
+     que definimos YA INCLUYE padding y border.
+     Sin esto, agregar padding "agranda" el elemento
+     y rompe los cálculos. */
+    box-sizing: border-box;
+} 
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 60px;
+}
+
+
+/* ============================================
+       LA TARJETA — aquí se concentra el box-model
+    =============================================== */
+.card {
+    width: 320px;
+
+    /* ⭐ MARGIN AUTO: reparte el espacio sobrante
+         de forma equitativa, centrando el elemento.
+         Solo funciona si tiene width definido
+         y es display: block. */
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    /* ⭐ BORDER: grosor | estilo | color */
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+
+    /* ⭐ PADDING: espacio INTERNO entre el borde
+     y el contenido. Valor único = 4 lados iguales. */
+    padding: 32px;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    /* ⭐ BORDER sobre la imagen */
+    border: 3px solid #4f46e5;
+
+    /* ⭐ display:block + margin:auto = centrado.
+         Los <img> son inline por defecto, necesitamos
+         convertirlos a bloque para que margin:auto funcione. */
+    display: block;
+    margin: 0 auto 16px auto;
+    /* top=0 | right=auto | bottom=16px | left=auto */
+}
+
+.card-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.card-role {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.card-bio {
+    font-size: 0.88rem;
+    color: #4b5563;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tag {
+    /* inline-block: puede tener padding/margin
+         pero fluye junto a otros elementos */
+    display: inline-block;
+
+    /* ⭐ PADDING: dos valores = vertical | horizontal */
+    padding: 4px 12px;
+
+    background-color: #ede9fe;
+    color: #4f46e5;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: 999px;
+
+    /* ⭐ MARGIN entre etiquetas */
+    margin: 4px 3px;
+}
+
+.tags {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.btn-contacto {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #4f46e5;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn-contacto:hover {
+    background-color: #ffffff;
+    color: #4f46e5;
+}
+
+        /* ============================================
+       ⭐ DESAFÍO FINAL
+
+       Probá estos cambios y explicá qué pasa:
+
+       1. Sacale el "width: 320px" a .card
+          → ¿Por qué deja de centrarse?
+
+       2. En .card, cambiá box-sizing a "content-box"
+          y observá cómo cambia el tamaño total.
+          → ¿Cuánto mide la tarjeta ahora en total?
+          barra de navegavion nombre de mi empresa
+          contacto
+          flexbox tema de tablas 
+          puntod de corte 
+    =============================================== */
